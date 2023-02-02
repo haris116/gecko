@@ -1,0 +1,6 @@
+<div>
+  <%= if @current_user do %>
+    <h1 style="margin-left: 280px">Welcome <%= @current_user.first_name %>!</h1>
+    <button class="btn" data-method="get" data-to="/chat" style="margin-left: 330px">Chat</button>
+  <% end %>
+</div>

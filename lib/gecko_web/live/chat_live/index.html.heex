@@ -1,0 +1,13 @@
+<div>
+  <h1>Gecko Chat</h1>
+  <div id="chat" phx-hook="scroll" class="messages" style="border: 1px solid #eee; height: 400px; overflow: scroll; margin-bottom: 8px;">
+    <%= for m <- @messages do %>
+      <p style="margin: 2px;"><b><%= m.name %></b>: <%= m.text %></p>
+    <% end %>
+  </div>
+  <form phx-submit="send">
+    <input type="text" name="text" />
+    <button type="submit">Send</button>
+    <button class="btn" data-method="get" data-to="/"> Back </button>
+  </form>
+</div>
